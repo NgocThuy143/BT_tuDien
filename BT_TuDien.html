@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ Điển </title>
+</head>
+<body>
+<input id="TimKiem" type="text" >
+<button id="subMit" onclick="search()">Search</button>
+
+<script>
+    let Eng = ["apple","orange","grape","peach","mango","banana"];
+    let Viet = ["táo","cam","nho","đào","xoài","chuối"];
+
+    function search() {
+        var nhap = document.getElementById('TimKiem').value;
+        var flag = false;
+        for(i=0; i<Eng.length ; i++){
+            if(Eng[i] == nhap){
+                alert(Viet[i]);
+                document.getElementById('TimKiem').value = arrVie[i];
+                flag = true;
+            }
+        }
+        if(!flag){
+            alert('Rất tiếc từ đó không có trong Từ điển !');
+        }
+    }
+</script>
+</body>
+</html>
